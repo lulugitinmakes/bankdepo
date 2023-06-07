@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="border:orange;border-style:solid;border-width:5px;padding-left:190px;margin-left:400px;margin-right:400px">
+<form method="post" action="#">
+    {% csrf_token %}
+    <h3 style="color:blue;padding-left:80px">FORM</h3>
+    {{form.as_p}}
+    <button type="submit">Submit</button>
+
+</form>
+    <br>
+<form method="post" action="{% url 'log_out' %}">
+    {% csrf_token %}
+    <button type="submit" value="logout">Logout</button>
+
+
+
+
+</form>
+ </div>
+</body>
+</html>
